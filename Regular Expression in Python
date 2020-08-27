@@ -1,0 +1,129 @@
+import re
+mystr = '''Tata Limited
+Dr. David Landsman, executive director
+18, Grosvenor Place
+London SW1X 7HSc
+Phone: +44 (20) 7235 8281
+Fax: +44 (20) 7235 8727
+Email: tata@tata.co.uk
+Website: www.europe.tata.com
+Directions: View map
+
+Tata Sons, North America
+1700 North Moore St, Suite 1520
+Arlington, VA 22209-1911
+USA
+Phone: +1 (703) 243 9787
+Fax: +1 (703) 243 9791
+66-66
+455-4545
+Email: northamerica@tata.com 
+Website: www.northamerica.tata.com
+Directions: View map fass
+harry bhai lekin
+bahut hi badia aadmi haiaiin'''
+
+#Operations in Regular Expressions,findall,search,split,sub,finditer
+
+# patt = re.compile(r'fass')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+#     print(mystr[448:452])
+
+#Print all matches
+# patt = re.compile(r'.')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+# patt = re.compile(r'.adm')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+#When String starts with adm
+# patt = re.compile(r'^adm')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+#String start with Tata
+# patt = re.compile(r'Tata')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+#String is not ended with Tata
+# patt = re.compile(r'$Tata')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+#string ends with
+# patt = re.compile(r'iin$')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+#It doesn't matter in this how much i or zero in this pattern
+# patt = re.compile(r'ai*')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+# patt = re.compile(r'a*i*')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+# patt = re.compile(r'ai+')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+# patt = re.compile(r'ai{2}')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+# patt = re.compile(r'(ai){2}')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+#Either or
+# patt = re.compile(r'ai{1}|t')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+# patt = re.compile(r'ai{1}|Fax')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+#Special Sequences
+# patt = re.compile(r'\ATata')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+# patt = re.compile(r'\BFax')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+# patt = re.compile(r'27\b')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+# patt = re.compile(r'\d{5}-\d{4}')
+# matches = patt.finditer(mystr)
+# for match in matches:
+#     print(match)
+
+#Task 
+#Given a string with a lot of phone numbers starting from 91
+
